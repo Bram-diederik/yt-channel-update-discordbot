@@ -47,7 +47,7 @@ Lists all YouTube channels currently being tracked in the server, along with the
         Channel ID: UC67890xyz
         Hashtags: No hashtags
 
-!add_post_channel <channel>
+!set_post_channel <channel>
 
 Sets the specified Discord text channel as the destination for posting updates about new videos.
 
