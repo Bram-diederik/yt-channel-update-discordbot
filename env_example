@@ -1,0 +1,6 @@
+#copy to .env
+DISCORD_TOKEN = "THETOKENFROMTHEDISCORDSITE"
+YOUTUBE_API_KEY = "THETOKENFROMTHEGOOGLECONSOLESITE"
+CHECK_INTERVAL = 3600  #interval one hour. 
+ALLOWED_GUILD_ID = "MY not so famous discord guid"  # Replace with your server ID (as a string)
+DEBUG_LOGGING = 0 #set to 1 to enable debugging

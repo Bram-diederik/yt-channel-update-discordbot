@@ -7,13 +7,10 @@ import logging
 import re
 import os
 from dotenv import load_dotenv
-
 # Load environment variables from .env file
 load_dotenv()
 
 # Configure logging
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
-
 intents = discord.Intents.default()
 intents.members = True
 intents.messages = True
@@ -45,7 +42,7 @@ async def add_channel(ctx, youtube_channel_url, *hashtags):
     
     channel_id = get_channel_id_from_url(youtube_channel_url)
     if not channel_id:
-        await ctx.send("Invalid YouTube URL.")
+        await ctx.send("Invalid YouTube URL. Make sure you provide a channel.")
         return
 
     if guild_id not in data["channels"]:
@@ -128,7 +125,7 @@ def get_channel_id_from_url(url):
     """
 
     # Improved regular expression for robust channel ID extraction:
-    pattern = r"(?:https?://)?(?:www\.)?youtube\.com/(?:(?:user|channel)/([^/?]+))"
+    pattern = r"(?:https?://)?(?:www\.)?youtube\.com/(?:(?:channel)/([^/?]+))"
     match = re.search(pattern, url)
 
     if match:
