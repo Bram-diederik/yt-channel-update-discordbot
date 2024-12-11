@@ -23,6 +23,14 @@ Adds a YouTube channel for tracking in the current Discord server. Optionally, y
 
     Note: If no hashtags are specified, all videos from the channel will be posted.
 
+
+
+Finding youtube channels. 
+
+    The youtube api works with channels the @user tag is not working internaly
+    Please find channels using google. e.q: `bram diederik site:youtube.com/channel`
+
+    
 !delete_channel <url>
 
 Removes a YouTube channel from the tracking list for the current Discord server.
@@ -55,7 +63,7 @@ Sets the specified Discord text channel as the destination for posting updates a
         channel: Mention or ID of the text channel.
 
     Example:
-        !add_post_channel #youtube-updates
+        !set_post_channel #youtube-updates
 
 Setup and Usage
 
@@ -77,5 +85,7 @@ Notes
 
     The bot runs on an interval to check for new videos (default: 1 hour).
     Hashtag filtering is case-insensitive.
+
+    
 
 Enjoy using the YouTube Hashtag Bot! 🎥
